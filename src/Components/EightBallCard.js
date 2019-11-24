@@ -1,10 +1,12 @@
 import React from "react";
-
+import uuid from "uuid/v4"
 
 export default class EightBallCard extends React.Component {
 	render() {
 		const responses = this.props.response.map(response => {
-			return <p>{response}</p>;
+			return <div key={uuid()}>
+                {response}
+                </div>;
 		});
 		return (
 			<div className="section">
